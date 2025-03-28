@@ -3,32 +3,75 @@
 #define linha 10
 #define coluna 10
 
+//função para inicializar o tabuleiro
+void iniciar_tabuleiro(int tabuleiro[linha][coluna]){
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            
+                tabuleiro[i][j] = 0;  // Água
+            }   
+        }printf("\n");
+    
+
+   
+}
+
+// função para imprimir o tabuleiro
+void imprimir_tabuleiro(int tabuleiro[linha][coluna]){
+
+    char letra[10]= {'A','B','C','D','E','F','G','H','I','J'};
+    printf("        Tabuleiro:\n");
+    printf("   ");
+    for (int j = 0; j < 10; j++){
+        printf("%c ", letra[j]);
+
+    }printf("\n");
+    for (int i = 0; i < 10; i++){
+        printf("%d- ", i);
+        for (int j = 0; j < 10; j++)
+        {
+            printf("%d ", tabuleiro[i][j]);
+        }printf("\n");
+    }
+
+
+}
+
 // Desafio Batalha Naval - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
+    int tabuleiro[linha][coluna];
 
     // Nível Novato - Posicionamento dos Navios
-    printf("        Tabuleiro:\n");
-    printf("   ");
-    char letra[10]= {'A','B','C','D','E','F','G','H','I','J'};
-    for (int j = 0; j < 10; j++)
+    
+    iniciar_tabuleiro(tabuleiro);
+
+    tabuleiro[linha][coluna];
+    for (int i = 3; i < linha; i++)
     {
-    
-        printf("%c ", letra[j]);
-    }printf("\n");
-    
-    int tabuleiro[linha][coluna];
-        for (int i = 0; i < 10; i++) {
-            printf("%d- ", i);
-            for (int j = 0; j < 10; j++) {
-                
-                
-                printf("%d ", tabuleiro[i][j] = 0);  // Água
+
+        for (int j = 4; j < coluna; j++)
+        {
+            if ( i + j == 9)
+            {
+                tabuleiro[i][j] = 3;
             }
-            printf("\n");   
-        }  
+            
+        }
+        
+    } 
+    
+    
+
+    imprimir_tabuleiro(tabuleiro);
+    
+    
+        
+        
+        
+            
 
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.

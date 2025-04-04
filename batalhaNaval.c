@@ -64,6 +64,7 @@ int main() {
         }
         
     }
+
     
 
     imprimir_tabuleiro(tabuleiro);

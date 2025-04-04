@@ -49,20 +49,21 @@ int main() {
     iniciar_tabuleiro(tabuleiro);
 
     tabuleiro[linha][coluna];
-    for (int i = 3; i < linha; i++)
+    
+    for (int i = 0; i < linha; i++)
     {
 
-        for (int j = 4; j < coluna; j++)
+        for (int j = 0; j < coluna; j++)
         {
-            if ( i + j == 9)
+            if ( i + j == 9 || i == j)
             {
+                
                 tabuleiro[i][j] = 3;
             }
             
         }
         
-    } 
-    
+    }
     
 
     imprimir_tabuleiro(tabuleiro);
